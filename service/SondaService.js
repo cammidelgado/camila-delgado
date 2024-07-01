@@ -35,6 +35,15 @@ class SondaService{
         }
     }
 
+    getStatisticsSondaService = async() => {
+        try {
+            const data = await this.sondaModel.getStatistics()
+            return data
+        } catch (error) {
+            throw error
+        }
+    }
+
 }
 
 export default SondaService

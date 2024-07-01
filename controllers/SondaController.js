@@ -32,6 +32,15 @@ class SondaController{
             res.status(400).send({errorMsg: error.message})
         }
     }
+
+    getStatisticsSonda = async(req, res) => {
+        try {
+            const data = await this.sondaService.getStatisticsSondaService()
+            res.status(200).send(data)
+        } catch (error) {
+            res.status(400).send({errorMsg: error.message})
+        }
+    }
 }
 
 export default SondaController
